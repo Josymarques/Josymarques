@@ -1,0 +1,22 @@
+import random
+
+
+
+def gera():
+    return random.randint(1, 100)
+def game():
+    resposta = gera()
+    tentativa = 0
+    print("\nO Seu numero é!")
+    numero = 0
+    while numero is not resposta:
+        tentativa += 1
+        chute = int(input("Coloque um número: "))
+        if chute > resposta:
+            print("Errou! Coloque um valor menor que ", chute)
+        elif chute < resposta:
+            print("Errou! Cloloque um valor maior que ", chute)
+        else:
+            print("Parabéns, o chute correto é ", resposta, "venceu em ", tentativa, " tentativas!")
+while True:
+    game()
